@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shree Hospital-karad</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  
+  :root {
+    --blue: #1e88e5;
+    --blue-dark: #1565c0;
+    --blue-light: #2196f3;
+    --blue-pale: #e3f2fd;
+    --text: #333;
+    --text-light: #666;
+    --white: #fff;
+     --orange: #ed6a24;
+    --green:#0e8b72;
+  }
+    
+
+
+body { 
+    font-family: 'Open Sans', sans-serif; 
+    color: var(--text); 
+    font-size: 14px;
+     line-height: 1.6;
+     }
+  a {
+     text-decoration: none; 
+     color: inherit; 
+    }
+  img { 
+    max-width: 100%;
+     display: block; 
+    }
+
+  /* ---- NAVBAR ---- */
+  .topbar {
+     background: #0e8b72;
+      padding: 6px 0; 
+    }
+  .topbar .container { 
+    display: flex;
+     justify-content: space-between; 
+     align-items: center;
+     }
+  .topbar span {
+     color: rgba(255,255,255,0.85);
+      font-size: 12px;
+       margin-right: 15px; 
+      }
+  .topbar span i {
+     margin-right: 5px;
+     }
+  .topbar .top-right a {
+     color: rgba(255,255,255,0.85);
+      font-size: 12px; 
+      margin-left: 12px;
+     }
+
+  .navbar {
+  width: 100%;
+  background: #fff;
+  padding: 12px 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Container */
+.navbar .container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Logo */
+.logo img {
+  height: 50px;
+  width: auto;
+}
+
+/* Menu */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 15px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.nav-links li a:hover,
+.nav-links li a.active {
+  color: #1abc9c;
+}
+.dropdown:hover .dropdown-menu {
+  display: block;
+  margin-top: 0;
+}
+
+/* Button */
+.nav-btn {
+  background: #1abc9c;
+  color: #fff;
+  padding: 10px 18px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.nav-btn:hover {
+  background: #159a80;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .nav-links {
+    display: none;
+  }
+}
+/* ===== HERO ===== */
+    header {
+      background: linear-gradient(135deg, #159a80);
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    header h1 { margin: 0; font-size: 42px; }
+
+    header p { opacity: 0.9; }
+    .about-section {
+  padding: 80px 0;
+  background: #f7f7f7;
+}
+/*about*/
+.about-container {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+/* Image */
+.about-image img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* Content */
+.about-content {
+  flex: 1;
+}
+
+.about-small {
+  color:  #159a80;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.about-content h2 {
+  font-size: 42px;
+  margin: 15px 0;
+  color: #2c2c3a;
+}
+
+.about-content p {
+  color: #6b6b7a;
+  line-height: 1.7;
+  margin-bottom: 25px;
+}
+
+/* List */
+.about-list {
+  list-style: none;
+}
+
+.about-list li {
+  margin: 12px 0;
+  padding-left: 35px;
+  position: relative;
+  color: #4a4a5a;
+  font-weight: 500;
+}
+
+.about-list li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 22px;
+  height: 22px;
+  background: #e7f0ff;
+  color:  #159a80;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 22px;
+  font-size: 12px;
+}
+/*mission*/
+.mission-section {
+  padding: 80px 0;
+  background: #f4f6fb;
+}
+
+.mission-container {
+  width: 90%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+/* Card */
+.mission-card {
+  background: #fff;
+  padding: 35px;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.mission-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+/* Icon */
+.icon {
+  width: 60px;
+  height: 60px;
+  background: #159a80;
+  color: #fff;
+  font-size: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+/* Text */
+.mission-card h3 {
+  font-size: 22px;
+  margin-bottom: 15px;
+  color: #2c2c3a;
+}
+
+.mission-card p {
+  color: #6b6b7a;
+  line-height: 1.7;
+}
+/*helath*/
+.about-health {
+  background: #f4f6fb;
+  padding: 80px 0;
+}
+
+.about-container {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+/* Left Content */
+.about-content {
+  flex: 1;
+}
+
+.sub-title {
+  color:#159a80;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.about-content h2 {
+  font-size: 44px;
+  margin: 15px 0;
+  color: #2c2c3a;
+}
+
+.about-content p {
+  color: #6b6b7a;
+  line-height: 1.7;
+  margin-bottom: 30px;
+}
+
+/* Features */
+.about-features {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+}
+
+.feature {
+  display: flex;
+  gap: 15px;
+}
+
+.feature .icon {
+  width: 55px;
+  height: 55px;
+  background: #eaf1ff;
+  border-radius: 50%;
+  color:orange;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+}
+
+.feature h4 {
+  font-size: 16px;
+  margin-bottom: 6px;
+}
+
+.feature p {
+  font-size: 14px;
+  margin: 0;
+}
+
+/* Image */
+.about-image {
+  flex: 1;
+}
+
+.about-image img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .about-container {
+    flex-direction: column;
+  }
+
+  .about-features {
+    grid-template-columns: 1fr;
+  }
+
+  .about-content h2 {
+    font-size: 34px;
+  }
+}
+/*newsletter*/
+.newsletter {
+  background: #f3f6fb;
+  padding: 70px 0;
+}
+
+.newsletter-container {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+/* Left Text */
+.newsletter-text h2 {
+  font-size: 32px;
+  color: #2c2c3a;
+  margin-bottom: 10px;
+}
+
+.newsletter-text p {
+  color: #6b6b7a;
+  max-width: 420px;
+  line-height: 1.6;
+}
+
+/* Form */
+.newsletter-form form {
+  display: flex;
+  gap: 15px;
+}
+
+.newsletter-form input {
+  padding: 16px 20px;
+  border-radius: 8px;
+  border: none;
+  width: 320px;
+  background: #fff;
+  font-size: 15px;
+  outline: none;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.newsletter-form button {
+  padding: 16px 35px;
+  border: none;
+  border-radius: 8px;
+  background: #159a80;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0 8px 20px rgba(46,109,246,0.3);
+}
+
+.newsletter-form button:hover {
+  background: orange;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .newsletter-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .newsletter-form form {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .newsletter-form input {
+    width: 100%;
+  }
+
+  .newsletter-form button {
+    width: 100%;
+  }
+}
+/*footer*/
+.footer {
+  background: #0f2434;
+  color: #cfd8dc;
+  padding-top: 60px;
+}
+
+.footer-container {
+  width: 90%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+}
+
+.footer-box h2 {
+  font-size: 28px;
+  color: #fff;
+}
+
+.footer-box h2 span {
+  color: #1abc9c;
+}
+
+.footer-box p {
+  margin: 15px 0;
+  line-height: 1.7;
+}
+
+.footer-box h3 {
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+.footer-box ul {
+  list-style: none;
+}
+
+.footer-box ul li {
+  margin: 10px 0;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.footer-box ul li:hover {
+  color: #1abc9c;
+  padding-left: 5px;
+}
+
+.social-icons a {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  background: #1b364a;
+  margin-right: 10px;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  color: #fff;
+  transition: 0.3s;
+}
+
+.social-icons a:hover {
+  background: #1abc9c;
+}
+
+.footer-bottom {
+  border-top: 1px solid #1b364a;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+  font-size: 14px;
+}
+
+
+</style>
+<!-- TOP BAR -->
+<div class="topbar">
+  <div class="container">
+    <div>
+      <span><i class="fas fa-phone"></i> 02164 221 082</span>
+      <span><i class="fas fa-envelope"></i>centremanager@nayesha.com</span>
+      <span><i class="fas fa-map-marker-alt"></i>75QV+85H, 747,Rukmini Nagar, Karad</span>
+    </div>
+    <div class="top-right">
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-linkedin-in"></i></a>
+    </div>
+  </div>
+</div>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="container">
+    
+    <!-- Logo Image -->
+    <div class="logo">
+      <img src="https://www.shreehospitalkarad.com/assets/img/Logo_Final_2.png" alt="MediPlus Logo">
+    </div>
+
+    <!-- Menu -->
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="aboutus.html">About</a></li>
+      <li><a href="servies.html">Services</a></li>
+     <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+            Doctors
+          </a>
+
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="doctor.html">Doctor</a></li>
+            <li><a class="dropdown-item" href="doctordetail.html">Doctor Details</a></li>
+            
+          </ul>
+        </li>
+      <li><a href="blog grid.html">Blog</a></li>
+      <li><a href="contact-us.html">Contact</a></li>
+    </ul>
+
+    <!-- Button -->
+    <a href="#" class="nav-btn">Book Appointment</a>
+  </div>
+</nav>
+<!-- HERO -->
+  <header>
+    <h1>About Our Company</h1>
+    <p>We build innovative digital solutions that help businesses grow.</p>
+  </header>
+<!--about-->
+  <section class="about-section">
+  <div class="about-container">
+
+    <!-- Left Image -->
+    <div class="about-image">
+      <img src="https://media.istockphoto.com/id/2158610739/photo/handsome-male-doctor-with-stethoscope-over-neck-working-while-looking-at-camera-in-the.jpg?s=612x612&w=0&k=20&c=WWd2ujTaKfM7VU47_z_E-2YPIGlEEvJa4qVgavD4a70=" alt="Doctor">
+    </div>
+
+    <!-- Right Content -->
+    <div class="about-content">
+      <span class="about-small">About Us</span>
+
+      <h2>Short Story About Fovia <br> Clinic Since 1999</h2>
+
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Quis ipsum
+        suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan
+        lacus vel facilisis.
+      </p>
+
+      <ul class="about-list">
+        <li>Scientific Skills For getting a better result</li>
+        <li>Communication Skills to getting in touch</li>
+        <li>A Career Overview opportunity Available</li>
+        <li>A good Work Environment For work</li>
+        <li>Scientific Skills For getting a better result</li>
+        <li>Communication Skills to getting in touch</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+<section class="mission-section">
+  <div class="mission-container">
+
+    <!-- Card 1 -->
+    <div class="mission-card">
+      <div class="icon">✔</div>
+      <h3>Our Planning</h3>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse.
+      </p>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="mission-card">
+      <div class="icon">✔</div>
+      <h3>Our Vision</h3>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse.
+      </p>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="mission-card">
+      <div class="icon">✔</div>
+      <h3>Our Mession</h3>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<section class="about-health">
+  <div class="about-container">
+
+    <!-- Left Content -->
+    <div class="about-content">
+      <span class="sub-title">Our Vision & Mission </span>
+      <h2>Better Information,<br>Better Health</h2>
+
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua.
+      </p>
+
+      <div class="about-features">
+
+        <div class="feature">
+          <div class="icon"><i class="fas fa-user-md"></i></div>
+          <div>
+            <h4>PROFESSIONAL STAFF</h4>
+            <p>Lorem ipsum dolor sit amet sit, consectetur adipiscing elit.</p>
+          </div>
+        </div>
+
+        <div class="feature">
+          <div class="icon"><i class="fas fa-baby"></i></div>
+          <div>
+            <h4>NEWBORN CARE</h4>
+            <p>Lorem ipsum dolor sit amet sit, consectetur adipiscing elit.</p>
+          </div>
+        </div>
+
+        <div class="feature">
+          <div class="icon"><i class="fas fa-flask"></i></div>
+          <div>
+            <h4>SUFFICIENT LAB TESTS</h4>
+            <p>Lorem ipsum dolor sit amet sit, consectetur adipiscing elit.</p>
+          </div>
+        </div>
+
+        <div class="feature">
+          <div class="icon"><i class="fas fa-tooth"></i></div>
+          <div>
+            <h4>TOOTH EXTRACTION</h4>
+            <p>Lorem ipsum dolor sit amet sit, consectetur adipiscing elit.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Right Image -->
+    <div class="about-image">
+      <img src="https://plus.unsplash.com/premium_photo-1658506671316-0b293df7c72b?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8ZG9jdG9yfGVufDB8fDB8fHww" alt="Doctor">
+    </div>
+
+  </div>
+</section>
+<!--newsletter-->
+<section class="newsletter">
+  <div class="newsletter-container">
+
+    <!-- Left Content -->
+    <div class="newsletter-text">
+      <h2>Sign up for newsletter</h2>
+      <p>
+        Cu qui soleat partiendo urbanitas. Eum aperiri indoctum eu, 
+        homero alterum.
+      </p>
+    </div>
+
+    <!-- Right Form -->
+    <div class="newsletter-form">
+      <form>
+        <input type="email" placeholder="Your email address" required>
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
+
+  </div>
+</section>
+<footer class="footer">
+  <div class="footer-container">
+
+    <!-- Hospital Info -->
+    <div class="footer-box">
+      <h2><span>Shree</span>Hospital</h2>
+      <p>
+        Providing exceptional healthcare services with compassion and innovation.
+        Your health is our priority.
+      </p>
+
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </div>
+     <!-- Quick Links -->
+    <div class="footer-box">
+      <h3>Quick Links</h3>
+      <ul>
+        <li>About Us</li>
+        <li>Our Services</li>
+        <li>Our Doctors</li>
+        <li>Departments</li>
+        <li>Latest News</li>
+        <li>Contact Us</li>
+      </ul>
+    </div>
+
+    <!-- Services -->
+    <div class="footer-box">
+      <h3>Our Services</h3>
+      <ul>
+        <li>laboretory service</li>
+        <li>Cardiology</li>
+        <li>Neurology</li>
+        <li>Orthopedics</li>
+        <li>Pediatrics</li>
+        <li>Eye Care</li>
+      </ul>
+    </div>
+
+    <!-- Contact -->
+    <div class="footer-box">
+      <h3>Contact Info</h3>
+      <p>75QV+85H, 747, Rukmini Nagar, Karad</p>
+      <p>02164 221 082</p>
+      <p>centremanager@nayesha.com</p>
+      <p>Open 24 hours</p>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    © 2026 ShreeHospital. All Rights Reserved. 
+  </div>
+</footer>
+
+</body>
+</html>
